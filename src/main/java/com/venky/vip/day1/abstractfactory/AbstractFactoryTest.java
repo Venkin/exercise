@@ -8,8 +8,8 @@ public class AbstractFactoryTest {
         bmwFactory.createCar().run();
         bmwFactory.createMotor().bike();
 
-        IManufacturingFactory volvoFactory = new VolvoManufacturingFactory();
+        /*IManufacturingFactory volvoFactory = new VolvoManufacturingFactory();
         volvoFactory.createMotor().bike();
-        volvoFactory.createCar().run();
+        volvoFactory.createCar().run();*/
     }
 }
