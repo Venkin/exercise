@@ -1,6 +1,6 @@
 package com.venky.vip.day1.abstractfactory;
 
-public class AbstractFactory {
+public class AbstractFactoryTest {
 
     public static void main(String[] args) {
 
