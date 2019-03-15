@@ -1,10 +1,5 @@
-# exercise练习
+# 练习作业
 
-## 简单工厂模式类图
-![avatar](relation/day1/SimpleFactory.png)
+## 工厂模式
+[工厂模式的](relation/day1/FactoryPatterson.md)
 
-## 工厂方法模式类图
-![avatar](relation/day1/FactoryMethod.png)
-
-## 抽象工厂模式类图
-![avatar](relation/day1/AbstractFactory.png)
