@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75e299b5-44e0-4afc-9bcc-ec0bdf1b48bf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/relation/day2/SingletonPatterson.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/relation/day1/FactoryPatterson.md" afterPath="$PROJECT_DIR$/relation/day1/FactoryPattern.md" />
+      <change beforePath="$PROJECT_DIR$/relation/day2/SingletonPatterson.md" afterPath="$PROJECT_DIR$/relation/day2/SingletonPattern.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,8 +99,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FactoryPatterson.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/relation/day1/FactoryPatterson.md">
+      <file leaf-file-name="FactoryPattern.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/relation/day1/FactoryPattern.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="153">
@@ -111,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -124,8 +125,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingletonPatterson.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/relation/day2/SingletonPatterson.md">
+      <file leaf-file-name="SingletonPattern.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/relation/day2/SingletonPattern.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="0">
@@ -249,8 +250,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/venky/vip/day2/threadlocal/ThreadLocalSingletonTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/venky/vip/day2/threadlocal/ThreadLocalSingleton.java" />
         <option value="$PROJECT_DIR$/relation/day1/FactoryPatterson.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/relation/day2/SingletonPatterson.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -310,6 +311,12 @@
               <item name="exercise" type="b2602c69:ProjectViewProjectNode" />
               <item name="exercise" type="462c0819:PsiDirectoryNode" />
               <item name="relation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exercise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exercise" type="462c0819:PsiDirectoryNode" />
+              <item name="relation" type="462c0819:PsiDirectoryNode" />
+              <item name="day2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -571,7 +578,7 @@
       <workItem from="1538734078732" duration="11338000" />
       <workItem from="1542029773916" duration="4041000" />
       <workItem from="1545468011558" duration="1857000" />
-      <workItem from="1552434175903" duration="23035000" />
+      <workItem from="1552434175903" duration="23256000" />
     </task>
     <task id="LOCAL-00001" summary="提交项目">
       <created>1552578320848</created>
@@ -664,11 +671,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552669700712</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="单例文档">
+      <created>1552669834511</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1552669834511</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43269000" />
+    <option name="totallyTimeSpent" value="43490000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -758,7 +772,8 @@
     <MESSAGE value="单例模式：内部类，注册式以及ThreadLocal方式实现" />
     <MESSAGE value="提交" />
     <MESSAGE value="文档提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档提交" />
+    <MESSAGE value="单例文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="单例文档" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1388,7 +1403,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/relation/day1/FactoryPatterson.md">
+    <entry file="file://$PROJECT_DIR$/relation/day2/SingletonPattern.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relation/day1/FactoryPattern.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="153">
@@ -1404,17 +1430,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="119">
             <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/relation/day2/SingletonPatterson.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
             <folding />
           </first_editor>
           <second_editor />
