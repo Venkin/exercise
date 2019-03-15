@@ -1,5 +1,7 @@
 # 练习作业
 
-## 工厂模式
-[工厂模式的](relation/day1/FactoryPatterson.md)
+## 1、工厂模式
+[工厂模式的课后作业](relation/day1/FactoryPatterson.md)
 
+## 2、单例模式
+[单例模式的课后作业](relation/day1/FactoryPatterson.md)
