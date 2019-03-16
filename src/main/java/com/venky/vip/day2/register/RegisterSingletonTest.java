@@ -7,6 +7,9 @@ import java.io.ObjectOutputStream;
 
 /**
  * 注册式单例
+ *
+ * @author huwk
+ * @date 2019/3/17
  */
 public class RegisterSingletonTest {
 
