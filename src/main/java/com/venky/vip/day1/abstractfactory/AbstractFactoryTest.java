@@ -1,6 +1,6 @@
 package com.venky.vip.day1.abstractfactory;
 
-public class AbstractFactory {
+public class AbstractFactoryTest {
 
     public static void main(String[] args) {
 
@@ -8,8 +8,8 @@ public class AbstractFactory {
         bmwFactory.createCar().run();
         bmwFactory.createMotor().bike();
 
-        IManufacturingFactory volvoFactory = new VolvoManufacturingFactory();
+        /*IManufacturingFactory volvoFactory = new VolvoManufacturingFactory();
         volvoFactory.createMotor().bike();
-        volvoFactory.createCar().run();
+        volvoFactory.createCar().run();*/
     }
 }
