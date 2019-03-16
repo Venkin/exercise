@@ -1,26 +1,18 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
 .settings
+.project
+.classpath
+.tern-project
+.myumldata
 .springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+/target/
+*/.settings
+*/.project
+*/.classpath
+*/target/
+*/.tern-project
+*/.myumldata
+/bin/
+.idea/
 *.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-/build/
-© 2019 GitHub, Inc.
+classes/
+note/
