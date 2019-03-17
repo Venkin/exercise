@@ -5,3 +5,6 @@
 
 ## 2、单例模式
 [单例模式的课后作业](relation/day2/SingletonPattern.md)
+
+## 3、原型模式
+[原型模式的课后作业](relation/day3/PrototypePattern.md)
