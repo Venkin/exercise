@@ -23,8 +23,8 @@ public class LazySingletonTest {
             System.out.println(Thread.currentThread().getName() + ":" + simpleSingleton);
         });
 
-//        t1.start();
-//        t2.start();
+        t1.start();
+        t2.start();
 
         try {
             // 破坏单例的情况
@@ -39,7 +39,7 @@ public class LazySingletonTest {
             // 暴力初始化
             // 问题是为什么仅仅调用一次反射构造方法，就会抛出异常？
             // 因为在初始化一个对象后，会首先初始化静态变量，然后在初始化构造方法
-            Object o1 = c.newInstance();
+//            Object o1 = c.newInstance();
 
 //            Object o2 = c.newInstance();
 
@@ -47,6 +47,5 @@ public class LazySingletonTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
