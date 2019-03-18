@@ -1,4 +1,4 @@
-package com.venky.vip.day3.deep;
+package com.venky.vip.day3.prototype.deep;
 
 import java.util.Date;
 

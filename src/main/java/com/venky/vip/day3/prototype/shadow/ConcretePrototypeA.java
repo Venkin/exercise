@@ -1,4 +1,4 @@
-package com.venky.vip.day3.shadow;
+package com.venky.vip.day3.prototype.shadow;
 
 import java.util.List;
 

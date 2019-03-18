@@ -7,7 +7,7 @@
 - 循环体中生产大量的对象时。
 
 ## 作业代码路径：
-com.venky.vip.day3.assignment
+com.venky.vip.day3.prototype.assignment
 
 ## 作业疑问
 

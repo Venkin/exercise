@@ -1,4 +1,4 @@
-package com.venky.vip.day3.assignment;
+package com.venky.vip.day3.prototype.assignment;
 
 import org.springframework.beans.BeanUtils;
 
