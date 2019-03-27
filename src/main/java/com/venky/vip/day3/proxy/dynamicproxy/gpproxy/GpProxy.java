@@ -20,7 +20,7 @@ public class GpProxy {
 
     public static final String ln = "\t\n";
 
-    public static Object newProxyInstance(GpClassLoader classLoader,Class<?>[] interfaces,GpInvocationHandler h) {
+    public static Object newProxyInstance(GpClassLoader classLoader, Class<?>[] interfaces, GpInvocationHandler h) {
 
         try {
             // 1、动态生成源代码 .java文件
@@ -40,9 +40,9 @@ public class GpProxy {
 
             // 3、编译成.class文件
             JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-            StandardJavaFileManager manager = compiler.getStandardFileManager(null,null,null);
+            StandardJavaFileManager manager = compiler.getStandardFileManager(null, null, null);
             Iterable iterable = manager.getJavaFileObjects(f);
-            JavaCompiler.CompilationTask task = compiler.getTask(null,manager,null,null,null,iterable);
+            JavaCompiler.CompilationTask task = compiler.getTask(null, manager, null, null, null, iterable);
             task.call();
             manager.close();
 
@@ -67,10 +67,10 @@ public class GpProxy {
     private static String generateSrc(Class<?>[] interfaces) {
         StringBuffer sb = new StringBuffer();
         sb.append("package com.venky.vip.day3.proxy.dynamicproxy.gpproxy;" + ln);
-        sb.append("import com.venky.vip.day3.proxy.staticproxy.Person;" +ln);
+        sb.append("import com.venky.vip.day3.proxy.staticproxy.Person;" + ln);
         sb.append("import java.lang.reflect.*;" + ln);
-        sb.append("public final class $Proxy0 implements " + interfaces[0] + "{" + ln);
-        sb.append("GpInvocationHandler h;" + ln );
+        sb.append("public final class $Proxy0 implements " + interfaces[0].getName() + "{" + ln);
+        sb.append("GpInvocationHandler h;" + ln);
         sb.append("public $Proxy0(GpInvocationHandler h) {" + ln);
         sb.append("this.h = h;");
         sb.append("}" + ln);
@@ -98,7 +98,7 @@ public class GpProxy {
             sb.append("public " + m.getReturnType().getName() + " " + m.getName() + "(" + paramNames.toString() + ") {" + ln);
             sb.append("try { " + ln);
             sb.append("Method m = " + interfaces[0].getName() + ".class.getMethod(\"" + m.getName() + "\",new Class[]{" + paramClasses.toString() + "});" + ln);
-            sb.append(hasReturnValue(m.getReturnType()) ? "return " : "" + getCaseCode("this.h.invoke(this,m,new Object[]{" + paramValues + "})",m.getReturnType()) + ";" + ln);
+            sb.append((hasReturnValue(m.getReturnType()) ? "return " : "") + getCaseCode("this.h.invoke(this,m,new Object[]{" + paramValues + "})", m.getReturnType()) + ";" + ln);
             sb.append("} catch(Error _e) {}");
             sb.append("catch(Throwable e){" + ln);
             sb.append("throw new UndeclaredThrowableException(e);" + ln);
@@ -111,27 +111,51 @@ public class GpProxy {
         return sb.toString();
     }
 
-    private static Map<Class,Class> mappings = new HashMap<>();
+    private static Map<Class, Class> mappings = new HashMap<>();
+
     static {
-        mappings.put(int.class,Integer.class);
+        mappings.put(int.class, Integer.class);
     }
 
 
-    private static String getCaseCode(String code,Class<?> returnClass){
+    private static String getCaseCode(String code, Class<?> returnClass) {
 
-        return null;
+        if (mappings.containsKey(returnClass)) {
+            return "((" + mappings.get(returnClass).getName() + ")" + code + ")." + returnClass.getSimpleName() + "Value()";
+        }
+        return code;
     }
 
     private static String getReturnEmptyCode(Class<?> returnType) {
-        return null;
+        if (mappings.containsKey(returnType)) {
+            return "return 0;";
+        } else if (returnType == void.class) {
+            return "";
+        } else {
+            return "return null";
+        }
     }
 
+    /**
+     * 判断方法是否有返回值
+     *
+     * @param returnType
+     * @return
+     */
     private static boolean hasReturnValue(Class<?> returnType) {
-        return false;
+        return returnType != void.class;
     }
 
+    /**
+     * 首字母变小
+     *
+     * @param simpleName
+     * @return
+     */
     private static String toLowerFirstCase(String simpleName) {
-        return null;
+        char[] chars = simpleName.toCharArray();
+        chars[0] += 32;
+        return String.valueOf(chars);
     }
 
 

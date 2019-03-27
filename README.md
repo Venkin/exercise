@@ -8,3 +8,6 @@
 
 ## 3、原型模式
 [原型模式的课后作业](relation/day3/PrototypePattern.md)
+
+## 4、代理模式
+[代理模式的课后作业](relation/day3/ProxyPattern.md)
