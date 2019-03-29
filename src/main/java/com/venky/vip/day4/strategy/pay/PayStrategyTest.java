@@ -20,6 +20,5 @@ public class PayStrategyTest {
 
         // 支付的时候用户可以选择用哪个支付方式
         System.out.println(order.pay(PayStrategy.UNION_PAY));
-
     }
 }

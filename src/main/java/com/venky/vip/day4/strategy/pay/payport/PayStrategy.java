@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 支付策略管理
+ * 使用单例和工厂模式实现
  *
  * @author Venkin
  * @date 2019/3/28
