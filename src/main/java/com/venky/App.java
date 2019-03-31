@@ -1,13 +1,17 @@
 package com.venky;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.ComponentScan;
+
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+@ComponentScan
+public class App {
+    public static void main(String[] args) {
+
+        SpringApplication app = new SpringApplication(App.class);
+        app.run(args);
+        System.out.println("Hello World!");
     }
 }

@@ -1,8 +1,13 @@
 package com.venky;
 
-import com.venky.model.Employee;
-import com.venky.model.Person;
-import com.venky.model.Student;
+import com.venky.vip.day4.strategy.rebuild.ConfigurationPushStrategy;
+import com.venky.vip.day4.strategy.rebuild.model.NumberWhite;
+import com.venky.vip.day4.strategy.rebuild.model.SynModel;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * 测试类
@@ -10,27 +15,24 @@ import com.venky.model.Student;
  * @author Venkin
  * @date 2019/3/29
  **/
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = App.class)
+@ComponentScan
 public class MyTest {
 
     public static void main(String[] args) {
 
-        Student student = new Student();
-        student.setGrade("2");
-        student.setSno("22222");
-        push(student);
-
-        push(new Employee());
 
     }
 
-    private static void push(Person person){
+    @Test
+    public void test() {
+        NumberWhite numberWhite = new NumberWhite();
 
-        if (person != null) {
-            if (person instanceof Employee) {
-                System.out.println(((Employee) person).getPosition());
-            } else if (person instanceof Student){
-                System.out.println(((Student) person).getGrade());
-            }
-        }
+        SynModel synModel = new SynModel("Create_NumberWhite",numberWhite);
+
+
+        ConfigurationPushStrategy.getConfigurationPush(synModel).operate(synModel);
     }
+
 }

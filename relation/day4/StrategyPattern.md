@@ -9,5 +9,18 @@
 2. 一个系统需要动态的在几种算法中选一个。
 
 ## 策略模式重构代码
+之前使用了大量的if-else语句，使用策略+单例+工厂模式重构代码，是代码非常简洁
+```java
+class Test {
+    
+    public void test() {
+        NumberWhite numberWhite = new NumberWhite();
+            
+        SynModel synModel = new SynModel("Create_NumberWhite",numberWhite);
+            
+        ConfigurationPushStrategy.getConfigurationPush(synModel).operate(synModel);
+    }
+}
+```
 
 
