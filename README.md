@@ -11,3 +11,9 @@
 
 ## 4、代理模式
 [代理模式的课后作业](relation/day3/ProxyPattern.md)
+
+## 5、委派模式
+[委派模式的课后作业](relation/day4/DelegatePattern.md)
+
+## 5、策略模式
+[代理模式的课后作业](relation/day4/StrategyPattern.md)
