@@ -10,6 +10,7 @@
 
 ## 策略模式重构代码
 之前使用了大量的if-else语句，使用策略+单例+工厂模式重构代码，是代码非常简洁
+代码路径：com.venky.vip.day4.strategy.rebuild
 ```java
 class Test {
     
