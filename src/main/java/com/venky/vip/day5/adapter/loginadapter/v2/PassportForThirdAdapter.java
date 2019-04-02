@@ -13,36 +13,45 @@ public class PassportForThirdAdapter extends SigninService implements IPassportF
 
     @Override
     public ResultMsg loginForQQ(String id) {
-        return null;
+        return processLogin(id,LoginForQQAdapter.class);
     }
 
     @Override
     public ResultMsg loginForWechat(String token) {
-        return null;
+        return processLogin(token,LoginForWechatAdapter.class);
     }
 
     @Override
     public ResultMsg loginForTelphone(String telphone, String code) {
-        return null;
+        return processLogin(telphone,LoginForTelAdapter.class);
     }
 
     @Override
     public ResultMsg loginForToken(String id) {
-        return null;
+        return processLogin(id,LoginForTokenAdapter.class);
     }
 
     @Override
-    public ResultMsg loginForRegister(String username, String passport) {
-        return null;
+    public ResultMsg loginForRegister(String username, String password) {
+        super.register(username,password);
+        return super.login(username,password);
     }
 
+    /**
+     * 登录逻辑
+     * 用到了工厂模式和策略模式
+     *
+     * @param key
+     * @param clazz
+     * @return
+     */
     private ResultMsg processLogin(String key,Class<? extends LoginAdapter> clazz ) {
         try {
             LoginAdapter adapter = clazz.newInstance();
+
+            // 判断传过过来的逻辑的是否能处理指定逻辑
             if (adapter.support(adapter)) {
                 return adapter.login(key,adapter);
-            } else {
-                return null;
             }
 
         }catch (Exception e) {
