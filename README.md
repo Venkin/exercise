@@ -17,3 +17,9 @@
 
 ## 6、策略模式
 [策略模式的课后作业](relation/day4/StrategyPattern.md)
+
+## 7、模板模式
+[模板模式的课后作业](relation/day5/TemplatePattern.md)
+
+## 8、适配器模式
+[适配器模式的课后作业](relation/day5/AdapterPattern.md)
