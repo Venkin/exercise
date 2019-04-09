@@ -1,4 +1,4 @@
-package com.venky.vip.day6.decorator.v1;
+package com.venky.vip.day6.decorator.battercake.v1;
 
 /**
  * 煎饼果子

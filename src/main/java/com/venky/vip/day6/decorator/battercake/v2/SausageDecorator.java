@@ -1,4 +1,4 @@
-package com.venky.vip.day6.decorator.v2;
+package com.venky.vip.day6.decorator.battercake.v2;
 
 /**
  * 香肠装饰器
