@@ -1,6 +1,7 @@
 package com.venky.vip.day6.observer.guava;
 
 import com.google.common.eventbus.Subscribe;
+import com.venky.vip.day6.observer.gperadvice.Question;
 
 /**
  * 监听事件类
@@ -11,9 +12,9 @@ import com.google.common.eventbus.Subscribe;
 public class GuavaEvent {
 
     @Subscribe
-    public void subscribe(String msg) {
+    public void subscribe( Question question) {
         // 逻辑d代码
-        System.out.println("执行subscribe方法，传入的参数为 " + msg);
+        System.out.println("执行subscribe方法，传入的参数为 "  + question.getUsername());
 
     }
 }

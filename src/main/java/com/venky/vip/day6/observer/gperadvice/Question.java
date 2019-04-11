@@ -6,6 +6,8 @@ package com.venky.vip.day6.observer.gperadvice;
  **/
 public class Question {
 
+    private String asker;
+
     private String username;
 
     private String password;
@@ -34,5 +36,13 @@ public class Question {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAsker() {
+        return asker;
+    }
+
+    public void setAsker(String asker) {
+        this.asker = asker;
     }
 }

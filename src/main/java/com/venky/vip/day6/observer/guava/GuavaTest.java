@@ -1,6 +1,7 @@
 package com.venky.vip.day6.observer.guava;
 
 import com.google.common.eventbus.EventBus;
+import com.venky.vip.day6.observer.gperadvice.Question;
 
 /**
  * 测试类
@@ -17,7 +18,9 @@ public class GuavaTest {
         GuavaEvent guavaEvent = new GuavaEvent();
         eventBus.register(guavaEvent);
 
-        eventBus.post("venky");
+        Question question = new Question();
+        question.setUsername("venky");
+        eventBus.post(question);
 
     }
 }

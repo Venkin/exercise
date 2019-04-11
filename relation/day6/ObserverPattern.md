@@ -8,4 +8,5 @@
 邮件通知，微信朋友圈通知，广播通知等。
 
 ## 用Guava API实现GPer社区提问通知的业务场景
+代码地址：com.venky.vip.day6.observer.gperadvice.guava
 
