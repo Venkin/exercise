@@ -31,3 +31,5 @@
 ## 10、观察者模式
 [观察者模式的课后作业](relation/day6/ObserverPattern.md)
 
+## 11、设计模式总结
+[设计模式总结](relation/day7/DesignPatternSummary.md)
