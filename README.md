@@ -23,3 +23,11 @@
 
 ## 8、适配器模式
 [适配器模式的课后作业](relation/day5/AdapterPattern.md)
+
+## 9、装饰者模式
+[装饰者模式的课后作业](relation/day6/DecoratorPattern.md)
+
+
+## 10、观察者模式
+[观察者模式的课后作业](relation/day6/ObserverPattern.md)
+
