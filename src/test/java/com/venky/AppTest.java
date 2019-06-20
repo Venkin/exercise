@@ -2,14 +2,14 @@ package com.venky;
 
 import static org.junit.Assert.assertTrue;
 
-import com.tinet.rms.sdk.exceptions.ClientException;
-import com.tinet.rms.sdk.exceptions.ServerException;
-import com.tinet.rms.sdk.request.CheckRequest;
-import com.tinet.rms.sdk.request.SaveCdrDetailRequest;
-import com.tinet.rms.sdk.request.SaveCdrRequest;
-import com.tinet.rms.sdk.response.CheckResponse;
-import com.tinet.rms.sdk.response.SaveCdrDetailResponse;
-import com.tinet.rms.sdk.response.SaveCdrResponse;
+import com.tinet.rms.sdk.v2.request.CheckRequest;
+import com.tinet.rms.sdk.v2.request.SaveCdrDetailRequest;
+import com.tinet.rms.sdk.v2.request.SaveCdrRequest;
+import com.tinet.rms.sdk.v2.response.CheckResponse;
+import com.tinet.rms.sdk.v2.response.SaveCdrDetailResponse;
+import com.tinet.rms.sdk.v2.response.SaveCdrResponse;
+import com.tinet.smartlink.commons.sdk.core.exceptions.ClientException;
+import com.tinet.smartlink.commons.sdk.core.exceptions.ServerException;
 import org.junit.Test;
 
 import java.util.Random;
