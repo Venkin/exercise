@@ -1,5 +1,7 @@
 package com.venky;
 
+import java.util.UUID;
+
 /**
  * @author huwk
  * @date 2019/7/19
@@ -13,6 +15,12 @@ public class Test {
         if (freezeReason != null && freezeReason != 0) {
             freezeReasonType = freezeReason;
             System.out.println(freezeReasonType);
+
+            UUID uuid = UUID.randomUUID();
+
+            System.out.println(uuid);
+
+            System.out.println(uuid.toString().substring(24, 36));
         }
 
 
