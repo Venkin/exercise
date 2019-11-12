@@ -6,6 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * 文章 导入 处理
  *
@@ -19,16 +23,40 @@ public class ArticleExcelProcessorService implements CustomExcelProcessor<Articl
 
 
 
+    private Set<String> checkValueSet;
+
+    private List<Article> articles;
+
+
+    public void init(List<Article> articles) {
+
+        this.checkValueSet = new HashSet<>();
+        this.articles = articles;
+
+    }
 
     @Override
     public void invoke(Article data, AnalysisContext context) {
 
-        log.info("data {} row {}",data,context.readRowHolder().getRowIndex());
+        boolean check = checkUniqueValue(data.getTitle());
+
+        if (check) {
+            this.articles.add(data);
+        } else {
+            log.info("数据重复了 {}",data);
+        }
+
+
 
     }
 
     @Override
     public void doAfterAllAnalysed(AnalysisContext context) {
 
+        log.info("所有数据解析完成！");
+    }
+
+    private boolean checkUniqueValue(String title) {
+        return checkValueSet.add(title);
     }
 }

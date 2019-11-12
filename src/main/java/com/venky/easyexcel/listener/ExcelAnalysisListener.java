@@ -6,8 +6,6 @@ import com.venky.easyexcel.CustomExcelProcessor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 文章监听
@@ -18,17 +16,7 @@ import java.util.List;
 @Slf4j
 public class ExcelAnalysisListener<T> extends AnalysisEventListener<T> {
 
-    /**
-     * 每隔5条存储数据库，实际使用中可以3000条，然后清理list ，方便内存回收
-     */
-    private static final int BATCH_COUNT = 5;
-    List<T> list = new ArrayList<>();
-
     private CustomExcelProcessor processor;
-
-    public ExcelAnalysisListener(){
-
-    }
 
     public ExcelAnalysisListener(CustomExcelProcessor processor) {
         this.processor = processor;
@@ -37,23 +25,14 @@ public class ExcelAnalysisListener<T> extends AnalysisEventListener<T> {
     @Override
     public void invoke(T data, AnalysisContext context) {
 
-        if (processor != null) {
-            processor.invoke(data,context);
-        }
-
-        log.info("解析到一条数据:{}", data.toString());
-
         if (allNull(data)) {
             log.info("元素为空，不需要解析");
             return;
         }
 
-        list.add(data);
-        if (list.size() >= BATCH_COUNT) {
-            saveData();
-            list.clear();
+        if (processor != null) {
+            processor.invoke(data,context);
         }
-
     }
 
     public Boolean allNull(T data){
@@ -72,15 +51,8 @@ public class ExcelAnalysisListener<T> extends AnalysisEventListener<T> {
 
     @Override
     public void doAfterAllAnalysed(AnalysisContext context) {
-        saveData();
-        log.info("所有数据解析完成！");
-    }
-
-    /**
-     * 加上存储数据库
-     */
-    private void saveData() {
-        log.info("{}条数据，开始存储数据库！", list.size());
-        log.info("存储数据库成功！");
+        if (processor != null) {
+            processor.doAfterAllAnalysed(context);
+        }
     }
 }
