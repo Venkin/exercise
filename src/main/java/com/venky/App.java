@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * Hello world!
  */
-@ComponentScan
 @SpringBootApplication
 public class App {
 
