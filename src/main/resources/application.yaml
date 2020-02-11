@@ -1,0 +1,19 @@
+
+server:
+  compression:
+    enabled: true
+    min-response-size: 20480
+    mime-types: text/html,text/xml,text/plain,text/css,application/javascript
+# 管理端点的统一设置
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure.include: "*"
+  endpoint:
+    health.show-details: always
+
+kuan:
+  name: shishi
+  age: 18
+  gender: man
